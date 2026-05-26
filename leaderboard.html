@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - Sharpen Typing</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader_inner">
+        <span class="loader_name">Sharpen Typing</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <div class="logo_wordmark">
+            <span class="logo_name">Sharpen Typing</span>
+            <span class="logo_tagline">Speed Test</span>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav_links">
+            <li><a href="index.html" class="nav_link">Home</a></li>
+            <li>
+              <a href="singleplayer.html" class="nav_link">Single Player</a>
+            </li>
+            <li><a href="multiplayer.html" class="nav_link">Multiplayer</a></li>
+            <li><a href="leaderboard.html" class="nav_link">Leaderboard</a></li>
+            <li><a href="statistics.html" class="nav_link">Statistics</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="container">
+        <section class="stats-page-section">
+          <header class="stats-page-header controls-row">
+            <div>
+              <h1 class="page-title">Leaderboard</h1>
+              <p class="page-subtitle">
+                Your personal best scores, sorted by WPM.
+              </p>
+            </div>
+            <button id="clear-lb-btn" class="btn btn--ghost btn--sm">
+              Clear all
+            </button>
+          </header>
+
+          <div class="lb-table-wrapper">
+            <table class="lb-table">
+              <thead>
+                <tr>
+                  <th class="lb-rank">#</th>
+                  <th>
+                    <button class="sort-btn" data-sort="mode">Mode</button>
+                  </th>
+                  <th>
+                    <button class="sort-btn is-active is-desc" data-sort="wpm">
+                      WPM
+                    </button>
+                  </th>
+                  <th>
+                    <button class="sort-btn" data-sort="accuracy">
+                      Accuracy
+                    </button>
+                  </th>
+                  <th>
+                    <button class="sort-btn" data-sort="date">Date</button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="lb-tbody"></tbody>
+            </table>
+
+            <p id="lb-empty" class="lb-state-msg">
+              No scores yet -
+              <a href="singleplayer.html" class="footer-link">play a game</a> to
+              get started.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">© 2026 Sharpen Typing | Saba Sajaia</p>
+        <p class="footer-text">
+          <a href="singleplayer.html" class="footer-link">Play</a>
+          <a href="statistics.html" class="footer-link">Statistics</a>
+        </p>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script type="module" src="js/leaderboard.js"></script>
+  </body>
+</html>
