@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharpen Typing - Speed Test</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader_inner">
+        <span class="loader_name">Sharpen Typing</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <div class="logo_wordmark">
+            <span class="logo_name">Sharpen Typing</span>
+            <span class="logo_tagline">Speed Test</span>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav_links">
+            <li>
+              <a href="index.html" class="nav_link">Home</a>
+            </li>
+            <li>
+              <a href="singleplayer.html" class="nav_link">Single Player</a>
+            </li>
+            <li><a href="multiplayer.html" class="nav_link">Multiplayer</a></li>
+            <li><a href="leaderboard.html" class="nav_link">Leaderboard</a></li>
+            <li><a href="statistics.html" class="nav_link">Statistics</a></li>
+          </ul>
+        </nav>
+        <div class="nav_auth">
+          <a href="login.html" class="nav_auth-btn nav_auth-btn--outline"
+            >Log in</a
+          >
+          <a href="signup.html" class="nav_auth-btn nav_auth-btn--fill"
+            >Sign up</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="site-main" id="main-content">
+      <div class="container">
+        <section class="home-hero">
+          <p class="home-hero_eyebrow">Typing Speed Test</p>
+          <h1 id="hero-heading" class="home-hero_title">
+            Type faster.<br /><em>Think clearer.</em>
+          </h1>
+          <p class="home-hero_subtitle">
+            Measure your words per minute, track accuracy over time, and
+            challenge your friends in real-time multiplayer races.
+          </p>
+
+          <nav>
+            <div class="home-actions">
+              <a
+                href="singleplayer.html"
+                class="action-card action-card--primary"
+              >
+                <span class="action-card_title">Single Player</span>
+                <span class="action-card_desc"
+                  >Test your WPM and accuracy solo. 30s or 60s modes.</span
+                >
+              </a>
+              <a href="multiplayer.html" class="action-card">
+                <span class="action-card_title">Multiplayer</span>
+                <span class="action-card_desc"
+                  >Race against 2–5 players, same text, instant ranking.</span
+                >
+              </a>
+              <a href="leaderboard.html" class="action-card">
+                <span class="action-card_title">Leaderboard</span>
+                <span class="action-card_desc"
+                  >View your best runs sorted by WPM.</span
+                >
+              </a>
+              <a href="statistics.html" class="action-card">
+                <span class="action-card_title">Statistics</span>
+                <span class="action-card_desc"
+                  >Total games, average WPM, best score, and more.</span
+                >
+              </a>
+            </div>
+          </nav>
+        </section>
+
+        <section class="home-features">
+          <article class="feature-item">
+            <p class="feature-item_label">WPM</p>
+            <p class="feature-item_desc">Real-time tracking</p>
+          </article>
+          <article class="feature-item">
+            <p class="feature-item_label">5×</p>
+            <p class="feature-item_desc">Multiplayer players</p>
+          </article>
+          <article class="feature-item">
+            <p class="feature-item_label">∞</p>
+            <p class="feature-item_desc">Sentences library</p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">© 2026 Sharpen Typing | Saba Sajaia</p>
+        <p class="footer-text">
+          <a href="singleplayer.html" class="footer-link">Single Player</a>
+          -
+          <a href="multiplayer.html" class="footer-link">Multiplayer</a>
+         -
+          <a href="leaderboard.html" class="footer-link">Leaderboard</a>
+          -
+          <a href="statistics.html" class="footer-link">Statistics</a>
+        </p>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script type="module" src="js/loader.js"></script>
+  </body>
+</html>

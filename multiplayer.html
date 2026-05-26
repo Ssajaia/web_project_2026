@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplayer - Sharpen Typing</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader_inner">
+        <span class="loader_name">Sharpen Typing</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <div class="logo_wordmark">
+            <span class="logo_name">Sharpen Typing</span>
+            <span class="logo_tagline">Speed Test</span>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav_links">
+            <li><a href="index.html" class="nav_link">Home</a></li>
+            <li>
+              <a href="singleplayer.html" class="nav_link">Single Player</a>
+            </li>
+            <li><a href="multiplayer.html" class="nav_link">Multiplayer</a></li>
+            <li><a href="leaderboard.html" class="nav_link">Leaderboard</a></li>
+            <li><a href="statistics.html" class="nav_link">Statistics</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="container">
+        <section class="mp-section">
+          <div id="mp-step-setup" class="mp-step is-active">
+            <div class="mp-setup">
+              <h2 class="mp-setup_title">Multiplayer Race</h2>
+              <p class="mp-setup_desc">
+                Choose how many players will compete. Each player types the same
+                text in turn.
+              </p>
+
+              <fieldset>
+                <legend class="visually-hidden">Number of players</legend>
+                <div class="player-count-selector">
+                  <button class="player-count-btn" data-count="2">2</button>
+                  <button class="player-count-btn is-active" data-count="3">
+                    3
+                  </button>
+                  <button class="player-count-btn" data-count="4">4</button>
+                  <button class="player-count-btn" data-count="5">5</button>
+                </div>
+              </fieldset>
+
+              <form id="mp-setup-form">
+                <fieldset>
+                  <legend class="visually-hidden">Player names</legend>
+                  <div id="player-name-inputs" class="section-gap"></div>
+                </fieldset>
+                <button type="submit" class="btn btn--primary btn--lg">
+                  Start Race
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div id="mp-step-play" class="mp-step">
+            <div class="mp-player-header">
+              <div class="mp-player-badge">
+                <span class="mp-player-dot"></span>
+                <span id="mp-player-label">Player 1</span>
+              </div>
+              <div class="mp-progress-bar" id="mp-progress-bar"></div>
+            </div>
+
+            <div class="stats-bar">
+              <div class="stat-item stat-item--highlight">
+                <output id="mp-timer" class="timer-display">01:00</output>
+                <span class="stat-item_label">time</span>
+              </div>
+              <div class="stat-item">
+                <output id="mp-wpm" class="stat-item_value">-</output>
+                <span class="stat-item_label">wpm</span>
+              </div>
+              <div class="stat-item">
+                <output id="mp-accuracy" class="stat-item_value">-</output>
+                <span class="stat-item_label">accuracy</span>
+              </div>
+            </div>
+
+            <div class="typing-display">
+              <p id="mp-display-text" class="typing-display_text"></p>
+            </div>
+
+            <div class="typing-input-wrapper">
+              <label for="mp-typing-input" class="visually-hidden"
+                >Type the text shown above</label
+              >
+              <input
+                type="text"
+                id="mp-typing-input"
+                name="mp-typing-input"
+                class="typing-input"
+                placeholder="Start typing to begin…"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+              />
+            </div>
+
+            <div class="controls-bar">
+              <button
+                id="mp-next-btn"
+                class="btn btn--primary btn--sm"
+                disabled
+              >
+                Next Player
+              </button>
+            </div>
+
+            <p class="hint-text" style="margin-top: 1rem">
+              <kbd class="kbd">Tab</kbd> to restart current player
+            </p>
+          </div>
+
+          <div id="mp-step-results" class="mp-step">
+            <h2 class="mp-results-title">Race Complete</h2>
+            <p class="mp-results-subtitle" id="mp-winner-text">
+               Winner announced below
+            </p>
+
+            <table class="ranking-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Player</th>
+                  <th>WPM</th>
+                  <th>Accuracy</th>
+                  <th>Errors</th>
+                </tr>
+              </thead>
+              <tbody id="ranking-tbody"></tbody>
+            </table>
+
+            <div class="mp-actions">
+              <button id="mp-rematch-btn" class="btn btn--primary btn--sm">
+                Rematch
+              </button>
+              <button id="mp-new-game-btn" class="btn btn--ghost btn--sm">
+                New Game
+              </button>
+              <a href="leaderboard.html" class="btn btn--ghost btn--sm"
+                >Leaderboard</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">© 2025 Sharpen Typing | Saba Sajaia</p>
+        <p class="footer-text">
+          <a href="leaderboard.html" class="footer-link">Leaderboard</a>
+          -
+          <a href="statistics.html" class="footer-link">Statistics</a>
+        </p>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script type="module" src="js/multiplayer.js"></script>
+  </body>
+</html>
