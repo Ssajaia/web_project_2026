@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sharpen Typing - Statistics. View your typing performance over time."
+    />
+    <title>Statistics - Sharpen Typing</title>
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader" aria-hidden="true">
+      <div class="loader_inner">
+        <span class="loader_name">Sharpen Typing</span>
+      </div>
+    </div>
+
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a href="index.html" class="logo" aria-label="Sharpen Typing - Home">
+          <div class="logo_wordmark">
+            <span class="logo_name">Sharpen Typing</span>
+            <span class="logo_tagline">Speed Test</span>
+          </div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav_links" role="list">
+            <li><a href="index.html" class="nav_link">Home</a></li>
+            <li>
+              <a href="singleplayer.html" class="nav_link">Single Player</a>
+            </li>
+            <li><a href="multiplayer.html" class="nav_link">Multiplayer</a></li>
+            <li><a href="leaderboard.html" class="nav_link">Leaderboard</a></li>
+            <li>
+              <a href="statistics.html" class="nav_link" aria-current="page"
+                >Statistics</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main-content">
+      <div class="container">
+        <section class="stats-page-section" aria-labelledby="stats-heading">
+          <header class="stats-page-header">
+            <h1 id="stats-heading" class="page-title">Statistics</h1>
+            <p class="page-subtitle">Your typing performance at a glance.</p>
+          </header>
+
+          <div id="stats-empty" class="stats-empty" hidden>
+            <p>
+              No data yet.
+              <a href="singleplayer.html" class="footer-link">Play a game</a> to
+              start building your stats.
+            </p>
+          </div>
+
+          <div id="stats-content">
+            <div
+              class="stats-grid section-gap"
+              role="list"
+              aria-label="Summary statistics"
+            >
+              <article class="stat-card" role="listitem">
+                <p class="stat-card_label">Total Games</p>
+                <p class="stat-card_value" id="stat-total-games">0</p>
+              </article>
+
+              <article class="stat-card" role="listitem">
+                <p class="stat-card_label">Best WPM</p>
+                <p class="stat-card_value">
+                  <span id="stat-best-wpm">-</span>
+                  <span class="stat-card_unit">wpm</span>
+                </p>
+              </article>
+
+              <article class="stat-card" role="listitem">
+                <p class="stat-card_label">Average WPM</p>
+                <p class="stat-card_value">
+                  <span id="stat-avg-wpm">-</span>
+                  <span class="stat-card_unit">wpm</span>
+                </p>
+              </article>
+
+              <article class="stat-card" role="listitem">
+                <p class="stat-card_label">Accuracy Average</p>
+                <p class="stat-card_value">
+                  <span id="stat-avg-acc">-</span>
+                  <span class="stat-card_unit">%</span>
+                </p>
+              </article>
+
+              <article class="stat-card" role="listitem">
+                <p class="stat-card_label">Multiplayer Wins</p>
+                <p class="stat-card_value" id="stat-mp-wins">0</p>
+              </article>
+
+              <article class="stat-card" role="listitem">
+                <p class="stat-card_label">Total Races</p>
+                <p class="stat-card_value" id="stat-mp-races">0</p>
+                <p class="stat-card_sub">multiplayer sessions</p>
+              </article>
+            </div>
+
+            <div class="section-gap">
+              <h2 class="stats-section-title">Recent Games</h2>
+              <div
+                id="recent-list"
+                class="recent-list"
+                role="list"
+                aria-label="Recent game history"
+              ></div>
+              <p id="recent-empty" class="lb-state-msg hidden">
+                No recent games recorded.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p class="footer-text">© 2025 Sharpen Typing | Saba Sajaia</p>
+        <p class="footer-text">
+          <a href="singleplayer.html" class="footer-link">Play</a>
+          &nbsp;·&nbsp;
+          <a href="leaderboard.html" class="footer-link">Leaderboard</a>
+        </p>
+      </div>
+    </footer>
+
+    <div
+      id="toast-container"
+      class="toast-container"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <script type="module" src="js/statistics.js"></script>
+  </body>
+</html>
