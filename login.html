@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharpen Typing – Login</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="auth-page">
+
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <div class="logo_symbol"></div>
+          <div class="logo_wordmark">
+            <span class="logo_name">Sharpen Typing</span>
+            <span class="logo_tagline">Speed Test</span>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav_links">
+            <li><a href="index.html" class="nav_link">Home</a></li>
+            <li><a href="singleplayer.html" class="nav_link">Single Player</a></li>
+            <li><a href="multiplayer.html" class="nav_link">Multiplayer</a></li>
+            <li><a href="leaderboard.html" class="nav_link">Leaderboard</a></li>
+            <li><a href="statistics.html" class="nav_link">Statistics</a></li>
+          </ul>
+        </nav>
+        <div class="nav_auth">
+          <a href="login.html" class="nav_auth-btn nav_auth-btn--fill">Log in</a>
+          <a href="signup.html" class="nav_auth-btn nav_auth-btn--outline">Sign up</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-main" id="main-content">
+      <div class="auth-card">
+        <p class="auth-eyebrow">Welcome back</p>
+        <h1 class="auth-title">Log in.<br /><em>Keep typing.</em></h1>
+
+        <form class="auth-form" id="loginForm">
+
+          <div class="form-field">
+            <label class="form-label" for="email">Email</label>
+            <div class="form-input-wrap">
+              <input
+                class="form-input"
+                id="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <p class="form-hint" id="email-hint"></p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="password">Password</label>
+            <div class="form-input-wrap">
+              <input
+                class="form-input"
+                id="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="********"
+                required
+                style="padding-right: 3.5rem;"
+              />
+              <button type="button" class="toggle-pw" id="togglePw">show</button>
+            </div>
+            <p class="form-hint" id="pw-hint"></p>
+          </div>
+
+          <button type="submit" class="auth-submit">Log in →</button>
+
+          <div class="auth-divider">
+            <span class="auth-divider-text">or</span>
+          </div>
+
+          <p class="auth-switch">
+            No account? <a href="signup.html">Create one</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">© 2026 Sharpen Typing | Saba Sajaia</p>
+        <p class="footer-text">
+          <a href="singleplayer.html" class="footer-link">Single Player</a>
+          -
+          <a href="multiplayer.html" class="footer-link">Multiplayer</a>
+          -
+          <a href="leaderboard.html" class="footer-link">Leaderboard</a>
+          -
+          <a href="statistics.html" class="footer-link">Statistics</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
