@@ -259,27 +259,6 @@ ul, ol { list-style: none; }
   align-items: center;
   gap: var(--space-3);
   user-select: none;
-
-  &_symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    border: var(--border) solid var(--color-text-primary);
-    border-radius: 2px;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 4px;
-      background: var(--color-text-primary);
-      border-radius: 1px;
-    }
-  }
-
   &_wordmark {
     display: flex;
     flex-direction: column;

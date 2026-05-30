@@ -262,24 +262,7 @@ ul, ol {
   gap: var(--space-3);
   user-select: none;
 }
-.logo_symbol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  border: var(--border) solid var(--color-text-primary);
-  border-radius: 2px;
-  position: relative;
-}
-.logo_symbol::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  background: var(--color-text-primary);
-  border-radius: 1px;
-}
+
 .logo_wordmark {
   display: flex;
   flex-direction: column;
