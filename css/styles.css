@@ -262,24 +262,6 @@ ul, ol {
   gap: var(--space-3);
   user-select: none;
 }
-.logo_symbol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  border: var(--border) solid var(--color-text-primary);
-  border-radius: 2px;
-  position: relative;
-}
-.logo_symbol::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  background: var(--color-text-primary);
-  border-radius: 1px;
-}
 .logo_wordmark {
   display: flex;
   flex-direction: column;
@@ -1264,7 +1246,7 @@ ul, ol {
 }
 .ranking-table .winner-row td {
   color: var(--color-text-primary);
-  background-color: rgba(240, 240, 240, 0.03);
+  background-color: rgba(240, 240, 240, 0.031372549);
 }
 
 .rank-badge {
@@ -1331,7 +1313,7 @@ ul, ol {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(240, 240, 240, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgb(240, 240, 240), transparent);
 }
 .stat-card:hover {
   border-color: var(--color-text-muted);
